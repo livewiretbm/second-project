@@ -1,0 +1,16 @@
+{% extends 'home.html' %}
+
+    {% block title %}
+    <title>AboutPage</title>
+    {% endblock %}
+
+{% block content %}
+<div >
+    <h3> {{now}} </h3>
+    <h2>{{name | upper}}</h2>
+    <h2>{{place | lower}}</h2>
+    <h2>{{name | length}}</h2>
+    <h2> {{place | title}}</h2>
+</div>
+{% endblock %}
+

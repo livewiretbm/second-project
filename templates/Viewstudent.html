@@ -1,0 +1,32 @@
+{% extends 'home.html' %}
+{% block content %}
+<h2> STUDENT DATA</h2>
+<table border="" class="p-4">
+    <tr>
+       <th>STUDENTID</th>
+        <th>NAME</th>
+        <th>EMAIL ID</th>
+        <th>PHONE NO</th>
+        <th>COURSE</th>
+        <th>FEES</th>
+        <!--update -->
+        <th>UPDATE</th>
+        <!--delete-->
+        <th>DELETE</th>
+    </tr>
+    {% for a in data %}
+    <tr>
+        <td>{{a.stdid}}</td>
+        <td>{{a.name}}</td>
+        <td>{{a.email}}</td>
+        <td>{{a.phone}}</td>
+        <td>{{a.course}}</td>
+        <td>{{a.fees}}</td>
+        <!--update -->
+        <td><a href="/updatestu/{{a.id}}">update</a></td>
+        <!--delete-->
+        <td><a href="/deletestu/{{a.id}}">delete</a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

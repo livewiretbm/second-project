@@ -1,0 +1,33 @@
+{% extends 'home.html' %}
+{% block content %}
+<h2>Enquiries:</h2>
+<table border="" width="100%">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone Number</th>
+        <th>Current Address</th>
+        <th>DateTime</th>
+        <th>Courses</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+{% for a in data %}
+    <tr>
+        <td>{{a.name}}</td>
+        <td>{{a.email}}</td>
+        <td>{{a.phone}}</td>
+        <td>{{a.Address}}</td>
+        <td>{{a.date}}</td>
+        <td>{{a.courses}}</td>
+        <td>
+            <a href="/edit/{{a.id}}">Edit</a>
+        </td>
+        <td>
+            <a href="/delete/{{a.id}}">Delete</a>
+        </td>
+
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
